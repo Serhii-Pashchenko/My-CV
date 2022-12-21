@@ -5,18 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My CV</title>
-    <style>
-        table, th, td {
-            border-collapse: collapse;
-            border: 1px solid black;
-        }
-    </style>
+    <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
     <hr>
-    <h1>Serhii Pashchenko</h1>
+    <h1 class="name">Serhii Pashchenko</h1>
     <img src="img/photo.jpg" alt="My photo" width="150">
-    <p>Senior Software Engineer</p>
+    <p class="title">Senior Software Engineer</p>
     <a href="https://github.com/Serhii-Pashchenko/My-CV/blob/master/form.html">Offer a job</a>
     <h2>Work experience</h2>
     <table>
@@ -29,7 +24,7 @@
             <td>Online Verification Specialist at <a href="https://infusemedia.com/" target="_blank">INFUSEmedia</a></td>
         </tr>
         <tr>
-            <td rowspan="2" style="vertical-align: top"><strong>Description</strong></td>
+            <th rowspan="2" style="vertical-align: top">Description</th>
             <td>Online data verification</td>
         </tr>
         <tr>
@@ -40,7 +35,7 @@
             <td>Manager at <a href="https://www.pravex.com.ua/" target="_blank">PRAVEX BANK JSC</a></td>
         </tr>
         <tr>
-            <td rowspan="3" style="vertical-align: top"><strong>Description</strong></td>
+            <th rowspan="3" style="vertical-align: top">Description</th>
             <td>Registration of bank payment cards</td>
         </tr>
         <tr>
@@ -51,7 +46,7 @@
         </tr>
     </table>
     <h2>Skills</h2>
-    <ul>
+    <ul class="skills">
         <li>HTML</li>
         <li>CSS</li>
         <li>JavaScript</li>
