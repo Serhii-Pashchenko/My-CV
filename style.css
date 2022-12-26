@@ -5,6 +5,7 @@ body {
 table, th, td {
   border-collapse: collapse;
   border: 1px solid black;
+  background-color: #dfebe7;
 }
 .title {
   font-weight: bold;
@@ -14,6 +15,7 @@ table, th, td {
 }
 th {
   text-transform: uppercase;
+  background-color: #bbeedf;
 }
 a {
   color: #00f;
@@ -27,4 +29,15 @@ a:hover {
 }
 .skills li {
   list-style-type: square;
+}
+.name, .title, .skills, .achievements {
+  border-style: solid;
+  border-top: none;
+  border-right: none;
+  border-bottom-color: #bbeedf;
+  border-left: none;
+}
+.photo {
+  border: 2px solid #bbeedf;
+  padding: 10px;
 }
