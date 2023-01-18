@@ -8,58 +8,85 @@
     <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
-    <hr>
-    <div class="personal_info">
-        <div class="nameAndTitle">
-            <h1 class="name">Serhii Pashchenko</h1>
-            <p class="title">Senior Software Engineer</p>
+    <div class="main">
+        <!-- Main content -->
+        <div class="main-content">
+            <div class="summary">
+                <h3 class="title">Summary</h3>
+                <p class="summary-description">I'm an enthusiastic and detail-oriented Frontend Software Engineer seeking an entry-level position with Company to use my skills in coding, troubleshooting complex problems, and assisting in the timely completion of projects. I look forward to interesting projects, opportunities for professional growth and development.</p>
+            </div>
+            <!-- Skills -->
+            <div class="skills">
+                <h3 class="title">Skills Highlights</h3>
+                <div class="list-items">
+                    <ul>
+                        <li>JavaScript</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>React</li>
+                    </ul>
+                    <ul>
+                        <li>React Native</li>
+                        <li>Redux</li>
+                        <li>Scrum</li>
+                        <li>Kanban</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Work -->
+            <div class="work">
+                <h3 class="title">Work Experience</h3>
+                <!-- Company 1 -->
+                <div class="work-description">
+                    <span style="font-weight: bold;">Name of employer:</span> INFUSEmedia, Kyiv<br>
+                    <span style="font-weight: bold;">Dates of employment:</span> 09/2022 - present<br>
+                    <span style="font-weight: bold;">Job title:</span> Online Verification Specialist<br>
+                    <span style="font-weight: bold;">Project/Role description:</span> verify the contact details of potential leads in accordance with standard operating procedures, identify clients’ needs, monitor lead tracking, research a variety of channels to find information about a potential client, prospecting, qualifying and generating new sales leads
+                </div>
+                <!-- Company 2 -->
+                <div class="work-description">
+                    <span style="font-weight: bold;">Name of employer:</span> Nova Poshta LLC, Kyiv<br>
+                    <span style="font-weight: bold;">Dates of employment:</span> August 2015 - August 2022<br>
+                    <span style="font-weight: bold;">Job title:</span> Head of the department<br>
+                    <span style="font-weight: bold;">Project/Role description:</span> fast and high-quality customer service, purchase of goods and equipment, monitoring the discipline of employees and the quality of their work, inventory of commodity balances, trained interns
+                </div>
+            </div>
+            <!-- Education -->
+            <div class="education">
+                <h3 class="title">Education</h3>
+                <div class="education-description">
+                    <span style="font-weight: bold;">Dates of studying:</span> from 2009 – to 2015<br>
+                    <span style="font-weight: bold;">Name of institution:</span> Ukrainian State University of Finance and International Trade<br>
+                    <span style="font-weight: bold;">Degree and major:</span> MS, Finance and сredit
+                </div>
+            </div>
         </div>
-        <img class="photo" src="img/photo.jpg" alt="My photo">
-    </div>
-    <div class="about">
-        <h2>Work experience</h2>
-        <table>
-            <tr>
-                <th style="text-align: left">Period:</th>
-                <th>Position</th>
-            </tr>
-            <tr>
-                <td>2022 - present</td>
-                <td>Online Verification Specialist at <a href="https://infusemedia.com/" target="_blank">INFUSEmedia</a></td>
-            </tr>
-            <tr>
-                <th rowspan="2" style="vertical-align: top; text-align: left">Description</th>
-                <td>Online data verification</td>
-            </tr>
-            <tr>
-                <td>Search and update information in database</td>
-            </tr>
-            <tr>
-                <td>2015 - 2022</td>
-                <td>Manager at <a href="https://www.pravex.com.ua/" target="_blank">PRAVEX BANK JSC</a></td>
-            </tr>
-            <tr>
-                <th rowspan="3" style="vertical-align: top; text-align: left">Description</th>
-                <td>Registration of bank payment cards</td>
-            </tr>
-            <tr>
-                <td>Opening and maintaining current accounts of individuals</td>
-            </tr>
-            <tr>
-                <td>Verification and identification of clients</td>
-            </tr>
-        </table>
-        <h2>Skills</h2>
-        <ul class="skills">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-        </ul>
-        <h2>Achievements</h2>
-        <ol class="achievements">
-            <li>Independently studied HTML, CSS and JavaScript</li>
-            <li>Completed several orders on <a href="https://freelancehunt.com/" target="_blank">Freelancehunt</a></li>
-        </ol>
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h1 class="name"><span style="color: #fff;">Serhii</span> Pashchenko</h1>
+            <img src="img/photo.jpg" alt="user photo" class="photo">
+            <!-- Contacts -->
+            <div class="contacts">
+                <h3 class="title">Contact</h3>
+                <h4 class="contact-title">Address</h4>
+                <p>Brovary, Ukraine</p>
+                <h4 class="contact-title">Phone</h4>
+                <p>+380673034308</p>
+                <h4 class="contact-title">E-mail</h4>
+                <p>
+                    <a href="mailto:paschenko09@gmail.com" class="contact-link">paschenko09@gmail.com</a>
+                </p>
+                <h4 class="contact-title">Linkedin</h4>
+                <p>
+                    <a href="https://www.linkedin.com" class="contact-link">https://www.linkedin.com/</a>
+                </p>
+            </div>
+            <div class="languages">
+                <h3 class="title">Languages</h3>
+                <p>Ukrainian - C2</p>
+                <p>English - B2</p>
+            </div>
+        </aside>
     </div>
 </body>
 </html>
