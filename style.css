@@ -189,3 +189,140 @@ body {
   color: #1E1E1E;
   margin-top: 15px;
 }
+
+/* FORM */
+.body-form{
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+.form {
+  max-width: 1024px;
+  padding: 20px;
+}
+
+.form h1, .form h2, .form table {
+  margin-top: 10px;
+}
+
+input,
+select,
+textarea {
+  appearance: none;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  border: none;
+  padding: 0 15px 0 15px;
+  box-sizing: border-box;
+  margin-top: 10px;
+}
+
+.contact-info table, .contact-info td {
+  border-collapse: collapse;
+  border: 1px solid black;
+  padding: 10px 15px;
+}
+
+fieldset {
+  padding: 10px;
+}
+
+input[type="email"] {
+  width: 460px;
+  height: 48px;
+  background: #F8FAFC;
+  border-radius: 4px;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.01em;
+  color: #3B4256;
+}
+
+label {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.01em;
+  color: #6F7482;
+}
+
+textarea {
+  min-width: 460px;
+  min-height: 139px;
+  background: #F8FAFC;
+  border-radius: 4px;
+}
+input::placeholder {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.01em;
+  color: #B8BCCA;
+}
+
+select {
+  width: 460px;
+  height: 48px;
+  border-radius: 4px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.01em;
+  color: #3B4256;
+  background: url(./img/mdi_arrow_drop_down.svg) no-repeat center right 0.75rem;
+  background-color: #F8FAFC;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+  min-width: 92px;
+  height: 32px;
+  background: #0048D9;
+  border-radius: 6px;
+  padding: 4px 16px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: #FFFFFF;
+}
+input[type="submit"]:hover {
+  background: #002266;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 1px solid #0048D9;
+}
+input:invalid {
+  border: 1px solid #ED0131;
+}
+.error {
+  display: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #ED0131;
+}
+input[type="email"]:invalid + .error {
+  display: block;
+}
+
+input:valid {
+  border: 1px solid #0E6245;
+}
