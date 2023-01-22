@@ -119,7 +119,7 @@ body {
 .photo {
   width: 385px;
   height: 292px;
-  margin-bottom: 50px;
+  margin: 35px 0 50px 0;
 }
 
 .sidebar .title {
@@ -172,6 +172,11 @@ body {
   line-height: 19px;
   color: #1C2E8C;
   text-decoration: none;
+}
+
+.offer {
+  margin-left: 40px;
+  font-size: 24px;
 }
 
 .languages {
