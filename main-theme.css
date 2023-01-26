@@ -1,0 +1,25 @@
+.main-theme {
+  /* MAIN PAGE COLORS */
+  --white-color: #fff;
+  --black-color: #000;
+  --backgroundColor-sidebar: #86A3B4;
+  --blue-color: #1C2E8C;
+  --text-color-sidebar: #263036;
+  --gray-color: #263036;
+  --dark-color: #1E1E1E;
+
+  /* FORM COLORS */
+  --backgroundColor-button: #0048D9;
+  --backgroundColor-button-hover: #002266;
+  --backgroundColor-input: #F8FAFC;
+  --text-color-input: #3B4256;
+  --text-color-placeholder: #B8BCCA;
+  --text-color-label: #6F7482;
+  --red-color: #ED0131;
+  --green-color: #0E6245;
+
+  /* SPACES */
+  --space-primary: 40px;
+  --space-secondary: 35px;
+  --space-other: 30px;
+}
