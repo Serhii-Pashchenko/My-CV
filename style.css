@@ -318,6 +318,20 @@ textarea:focus,
 select:focus {
   outline: 1px solid var(--backgroundColor-button);
 }
+input:valid {
+  border: 1px solid var(--green-color);
+}
+.success {
+  display: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--green-color);
+}
+#e-mail:valid ~ .success {
+  display: block;
+}
 input:invalid {
   border: 1px solid var(--red-color);
 }
@@ -329,12 +343,8 @@ input:invalid {
   line-height: 16px;
   color: var(--red-color);
 }
-input[type="email"]:invalid + .error {
+#e-mail:invalid ~ .error {
   display: block;
-}
-
-input:valid {
-  border: 1px solid var(--green-color);
 }
 
 @media screen and (max-width: 480px) {
@@ -363,11 +373,58 @@ input:valid {
   .photo:hover {
     transform: scale(1.75) translate(21.5%, 21.5%);
     box-shadow: 10px 10px 16px rgba(0, 0, 0, 0.25);
+    transition: transform 2s;
   }
   .work-description.previous {
     opacity: 0.7;
+    transition: opacity 2s;
   }
   .work-description.previous:hover {
+    opacity: 1;
+    transition: opacity 2s;
+  }
+}
+
+.sidebar {
+  animation: sidebarUp 1.5s linear;
+}
+
+@keyframes sidebarUp {
+  from {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+.main-content {
+  animation: contentUp 2s linear;
+}
+
+@keyframes contentUp {
+  from {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+.form {
+  animation: form2x 2s ease-in-out;
+}
+@keyframes form2x {
+  from {
+    transform: scale(2);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
     opacity: 1;
   }
 }
