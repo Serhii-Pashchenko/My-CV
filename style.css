@@ -318,32 +318,31 @@ textarea:focus,
 select:focus {
   outline: 1px solid var(--backgroundColor-button);
 }
+
+.success, .error {
+  display: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+}
+
 input:valid {
   border: 1px solid var(--green-color);
 }
 .success {
-  display: none;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 16px;
   color: var(--green-color);
 }
-#e-mail:valid ~ .success {
-  display: block;
-}
+
 input:invalid {
   border: 1px solid var(--red-color);
 }
 .error {
-  display: none;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 16px;
   color: var(--red-color);
 }
-#e-mail:invalid ~ .error {
+
+input[type="email"]:valid ~ .success,
+input[type="email"]:invalid ~ .error {
   display: block;
 }
 
