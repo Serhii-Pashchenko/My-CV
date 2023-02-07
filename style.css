@@ -313,21 +313,30 @@ textarea:focus,
 select:focus {
   outline: 1px solid #0048D9;
 }
-input:invalid {
-  border: 1px solid #ED0131;
-}
-.error {
+
+.success, .error {
   display: none;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
-  color: #ED0131;
-}
-input[type="email"]:invalid + .error {
-  display: block;
 }
 
 input:valid {
   border: 1px solid #0E6245;
+}
+.success {
+  color: #0E6245;
+}
+
+input:invalid {
+  border: 1px solid #ED0131;
+}
+.error {
+  color: #ED0131;
+}
+
+input[type="email"]:valid ~ .success,
+input[type="email"]:invalid ~ .error {
+  display: block;
 }
