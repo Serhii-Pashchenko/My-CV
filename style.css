@@ -384,25 +384,6 @@ input[type="email"]:invalid ~ .error {
   }
 }
 
-.sidebar {
-  animation: sidebarUp 1.5s linear;
-}
-
-@keyframes sidebarUp {
-  from {
-    opacity: 0;
-    transform: translateY(50%);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0%);
-  }
-}
-
-.main-content {
-  animation: contentUp 2s linear;
-}
-
 @keyframes contentUp {
   from {
     opacity: 0;
@@ -412,6 +393,14 @@ input[type="email"]:invalid ~ .error {
     opacity: 1;
     transform: translateY(0%);
   }
+}
+
+.sidebar {
+  animation: contentUp 1.5s linear;
+}
+
+.main-content {
+  animation: contentUp 2s linear;
 }
 
 .form {
