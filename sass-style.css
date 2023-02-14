@@ -358,8 +358,6 @@ body {
 
 /* FORM */
 .form {
-  width: 600px;
-  height: 600px;
   padding: 20px;
   position: fixed;
   left: calc(50% - 320px);
@@ -441,7 +439,7 @@ body {
   letter-spacing: 0.01em;
 }
 .form textarea {
-  min-width: 460px;
+  width: 460px;
   min-height: 139px;
   border-radius: 4px;
 }
@@ -481,6 +479,21 @@ body {
   }
   .skills {
     width: 335px;
+  }
+  .form {
+    left: 0;
+    top: 0;
+    padding: 20px 10px;
+  }
+  .form input[type=email] {
+    width: 260px;
+  }
+  .form textarea, .form select {
+    width: 260px;
+  }
+  #form {
+    border: none;
+    box-shadow: none;
   }
 }
 @media screen and (min-width: 481px) {
