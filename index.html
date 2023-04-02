@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My CV</title>
     <link rel="stylesheet" href="./sass-style.css" />
+    <script src="./script.js"></script>
 </head>
 <body class="my-theme">
     <div class="main">
@@ -13,10 +14,10 @@
         <aside class="sidebar">
             <h1 class="name"><span style="color: #fff;">Serhii</span> Pashchenko</h1>
             <a href="./hire-me.html" class="contact-link hire-me">Hire me</a>
-            <img src="img/photo.jpg" alt="user photo" class="photo">
+            <img src="img/photo.jpg" alt="user photo" class="photo" onclick="scale()">
             <!-- Contacts -->
             <div class="contacts">
-                <h3 class="title">Contact</h3>
+                <h3 class="title"><span class="navigation" id="c">C</span> Contact</h3>
                 <h4 class="contact-title">Address</h4>
                 <p>Brovary, Ukraine</p>
                 <h4 class="contact-title">Phone</h4>
@@ -31,7 +32,7 @@
                 </p>
             </div>
             <div class="languages">
-                <h3 class="title">Languages</h3>
+                <h3 class="title"><span class="navigation" id="l">L</span> Languages</h3>
                 <p>Ukrainian - C2</p>
                 <p>English - B2</p>
             </div>
@@ -39,12 +40,12 @@
         <!-- Main content -->
         <div class="main-content">
             <div class="summary">
-                <h3 class="title">Summary</h3>
+                <h3 class="title"><span class="navigation" id="s">S</span> Summary</h3>
                 <p class="summary-description">I'm an enthusiastic and detail-oriented Frontend Software Engineer seeking an entry-level position with Company to use my skills in coding, troubleshooting complex problems, and assisting in the timely completion of projects. I look forward to interesting projects, opportunities for professional growth and development.</p>
             </div>
             <!-- Skills -->
             <div class="skills">
-                <h3 class="title">Skills Highlights</h3>
+                <h3 class="title"><span class="navigation" id="h">H</span> Skills Highlights</h3>
                 <div class="list-items">
                     <ul>
                         <li>JavaScript</li>
@@ -62,7 +63,7 @@
             </div>
             <!-- Work -->
             <div class="work">
-                <h3 class="title">Work Experience</h3>
+                <h3 class="title"><span class="navigation" id="w">W</span> Work Experience</h3>
                 <!-- Company 1 -->
                 <div class="work-description current">
                     <span style="font-weight: bold;">Name of employer:</span> INFUSEmedia, Kyiv<br>
@@ -80,7 +81,7 @@
             </div>
             <!-- Education -->
             <div class="education">
-                <h3 class="title">Education</h3>
+                <h3 class="title"><span class="navigation" id="e">E</span> Education</h3>
                 <div class="education-description">
                     <span style="font-weight: bold;">Dates of studying:</span> from 2009 – to 2015<br>
                     <span style="font-weight: bold;">Name of institution:</span> Ukrainian State University of Finance and International Trade<br>
