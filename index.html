@@ -43,6 +43,11 @@
                 <h3 class="title"><span class="navigation" id="s">S</span> Summary</h3>
                 <p class="summary-description">I'm an enthusiastic and detail-oriented Frontend Software Engineer seeking an entry-level position with Company to use my skills in coding, troubleshooting complex problems, and assisting in the timely completion of projects. I look forward to interesting projects, opportunities for professional growth and development.</p>
             </div>
+            <!-- Projects -->
+            <div class="projects">
+                <h3 class="title"><span class="navigation" id="p">P</span> Projects</h3>
+                <ul id="repos"></ul>
+            </div>
             <!-- Skills -->
             <div class="skills">
                 <h3 class="title"><span class="navigation" id="h">H</span> Skills Highlights</h3>
@@ -90,5 +95,32 @@
             </div>
         </div>
     </div>
+
+    <script>
+        async function fetchRepos() {
+            const repos = await fetch('https://api.github.com/users/serhii-pashchenko/repos');
+            const data = await repos.json();
+
+            data.forEach(rep => {
+                let li = document.createElement('li');
+                document.getElementById('repos').appendChild(li);
+                let a = document.createElement('a');
+                a.classList.add('repository-link');
+                a.href = rep.html_url;
+                a.target = '_blank';
+                a.innerHTML = rep.full_name;
+                li.appendChild(a);
+                if (rep.description) {
+                    let p = document.createElement('p');
+                    p.innerHTML = rep.description;
+                    li.appendChild(p);
+                }
+            })
+        }
+
+        window.onload = function () {
+            fetchRepos();
+        };
+    </script>
 </body>
 </html>

@@ -80,6 +80,15 @@ $space-other: 30px;
     margin-top: $space-other;
   }
 
+  .projects {
+    li, p {
+      color: $gray-color;
+    }
+    .repository-link {
+      color: $blue-color;
+    }
+  }
+
   .skills {
     .list-items {
       margin-top: $space-other;
