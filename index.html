@@ -97,29 +97,41 @@
     </div>
 
     <script>
-        async function fetchRepos() {
-            const repos = await fetch('https://api.github.com/users/serhii-pashchenko/repos');
-            const data = await repos.json();
-
-            data.forEach(rep => {
-                let li = document.createElement('li');
-                document.getElementById('repos').appendChild(li);
-                let a = document.createElement('a');
-                a.classList.add('repository-link');
-                a.href = rep.html_url;
-                a.target = '_blank';
-                a.innerHTML = rep.full_name;
-                li.appendChild(a);
-                if (rep.description) {
-                    let p = document.createElement('p');
-                    p.innerHTML = rep.description;
-                    li.appendChild(p);
-                }
-            })
+        class FetchRepos {
+            constructor(token, name) {
+                this.token = token;
+                this.name = name;
+            }
+            async getRepos() {
+                await fetch(`https://api.github.com/users/${this.name}/repos`, {
+                        headers: {
+                            Authorization: `Bearer ${this.token}`
+                        }
+                    })
+                    .then(res => res.json())
+                    .then(data => {
+                        data.forEach(repo => {
+                            let li = document.createElement('li');
+                            document.getElementById('repos').appendChild(li);
+                            let a = document.createElement('a');
+                            a.classList.add('repository-link');
+                            a.href = repo.html_url;
+                            a.target = '_blank';
+                            a.innerHTML = repo.full_name;
+                            li.appendChild(a);
+                            if (repo.description) {
+                                let p = document.createElement('p');
+                                p.innerHTML = repo.description;
+                                li.appendChild(p);
+                            }
+                        })
+                    })
+            }
         }
 
+        
         window.onload = function () {
-            fetchRepos();
+            new FetchRepos('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', 'Serhii-Pashchenko').getRepos();
         };
     </script>
 </body>
